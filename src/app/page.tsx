@@ -1,65 +1,83 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="container">
+      {/* Section 1: Hero */}
+      <header className="section hero">
+        <div className="hero-badge">Agentic Workspace v1.0</div>
+        <h1 className="hero-title">Harness Engineering Boilerplate</h1>
+        <p className="hero-description">
+          고성능 AI 에이전트와 함께 웹사이트를 구축하기 위한 궁구의 프레임워크입니다.<br />
+          지능적인 <strong>Skills</strong>, 정교한 <strong>Workflow</strong>, 그리고 <strong>Harness</strong> 플랫폼이 결합되었습니다.
+        </p>
+        <div className="btn-group">
+          <a href="#features" className="btn btn-primary">시작하기</a>
+          <a href="https://github.com/chime/harness-boilerplate" className="btn btn-secondary">GitHub 저장소</a>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </header>
+
+      {/* Section 2: Core Methodology */}
+      <section id="features" className="section" style={{ background: 'var(--snow)', borderTop: '1px solid var(--secondary)', borderBottom: '1px solid var(--secondary)' }}>
+        <h2 style={{ marginBottom: '1.5rem', fontSize: '2.5rem' }}>Core Components</h2>
+        <p style={{ marginBottom: '4rem', color: 'var(--stone)' }}>에이전트가 당신의 의도를 이해하고 자율적으로 코드를 작성할 수 있도록 설계되었습니다.</p>
+        
+        <div className="grid">
+          <div className="card">
+            <h3>Skills</h3>
+            <p>에이전트가 특정 도구나 기술 스택을 완벽하게 다룰 수 있도록 정의된 지식 베이스입니다. (Next.js, Harness, Superpowers 등)</p>
+          </div>
+          <div className="card">
+            <h3>Workflow</h3>
+            <p>기능 정의부터 QA까지, 개발의 모든 단계를 표준화된 절차로 정의하여 에이전트의 일관된 작업 품질을 보장합니다.</p>
+          </div>
+          <div className="card">
+            <h3>Agentic Logic</h3>
+            <p>사용자의 요구사항을 분석하고, 스스로 설계(Brainstorming)하며, 검증(TDD)을 거쳐 프로덕션 레디 코드를 생산합니다.</p>
+          </div>
         </div>
-      </main>
+      </section>
+
+      {/* Section 3: Harness Integration */}
+      <section className="section">
+        <div style={{ maxWidth: '800px', width: '100%' }}>
+          <h2 style={{ marginBottom: '1.5rem', textAlign: 'center' }}>Harness & Superpowers</h2>
+          <div className="card" style={{ background: 'var(--background)', textAlign: 'left', marginTop: '2rem' }}>
+            <ul style={{ listStyle: 'none', padding: 0 }}>
+              <li style={{ marginBottom: '1.5rem' }}>
+                <strong>⚡️ Superpowers Integration</strong>: obra/superpowers 프레임워크를 탑재하여 설계부터 배포까지 TDD 기반의 에이전틱 자동화를 실현합니다.
+              </li>
+              <li style={{ marginBottom: '1.5rem' }}>
+                <strong>🚀 Harness CI/CD Pipeline</strong>: 코드가 작성되는 즉시 Harness 파이프라인을 통해 자동화된 빌드와 테스트, 안전한 배포가 진행됩니다.
+              </li>
+              <li>
+                <strong>🚩 Feature Flags</strong>: 새로운 기능을 즉시 배포하고, Harness 제어판에서 실시간으로 활성화 여부를 관리할 수 있습니다.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4: Code Preview */}
+      <section className="section" style={{ background: 'var(--snow)', borderTop: '1px solid var(--secondary)' }}>
+        <h2>Quick Start</h2>
+        <div className="code-window">
+          <div className="code-header">
+            <div className="dot"></div>
+            <div className="dot"></div>
+            <div className="dot"></div>
+          </div>
+          <div className="code-content">
+            <div className="code-line"><span className="code-prompt">$</span> git clone [repo-url]</div>
+            <div className="code-line"><span className="code-prompt">$</span> npm install</div>
+            <div className="code-line"><span className="code-prompt">$</span> # 에이전트에게 지시하세요:</div>
+            <div className="code-line"><span className="code-prompt">&quot;</span>.agent 폴더의 지침에 따라 새 기능을 추가해줘<span className="code-prompt">&quot;</span></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <p>© 2026 Harness Engineering. Built for Agents and Humans.</p>
+      </footer>
     </div>
   );
 }
